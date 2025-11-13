@@ -107,3 +107,12 @@ ts-node-commonjs-lab/
 ```bash
 npm run dev
 ```
+
+## 📡 8️⃣ Test the API
+### Now test your route POST /books.
+Using curl
+```bash
+curl -X POST http://localhost:3000/books \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Atomic Habits","author":"James Clear","year":2018}'
+```
