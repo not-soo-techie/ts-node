@@ -77,6 +77,23 @@ ts-node-commonjs-lab/
 
 ## 📄 5️⃣ Write the Code
 ### 🧠 `src/server.ts`
+### 🧠 `src/routes/bookRoutes.ts`
+### 🧠 `src/controllers/bookController.ts`
+
+### 📄 5️⃣.1 Helper function for fs
+```js
+import { promises as fs } from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+// Recreate __dirname and __filename for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Path to JSON file
+const dataFile = path.join(__dirname, '../data/books.json');
+```
 
 ## 📄 6️⃣ Tweak changes
 
@@ -108,7 +125,7 @@ ts-node-commonjs-lab/
 npm run dev
 ```
 
-## 📡 8️⃣ Test the API
+## 📡 9️⃣ Test the API
 ### Now test your route POST /books.
 Using curl
 ```bash
